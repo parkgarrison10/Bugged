@@ -1,8 +1,8 @@
 class Bug:
-    def __init__(self, id, description, project, priority, date_of_entry, resolved):
-        self.id = id
-        self.description = description
-        self.project = project
-        self.priority = priority
-        self.date_of_entry = date_of_entry
-        self.resolved = resolved
+    def __init__(self, id, description, project, priority, entry_date, resolved):
+        self.id = id                                # unique identifier for each bug 
+        self.description = description              # description of the bug
+        self.project = project                      # what project the bug is present in 
+        self.priority = priority                    # the priority of removing the bug (low, medium, high)
+        self.entry_date = entry_date                # date and time that the bug was added to the tracker
+        self.resolved = resolved                    # integer flag storing whether or not the bug has been removed/resolved

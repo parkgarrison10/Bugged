@@ -1,4 +1,4 @@
--- Create dealership database and user. Ensure Unicode is fully supported.
+-- Create tracker database. Ensure Unicode is fully supported.
 
 CREATE DATABASE IF NOT EXISTS tracker CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci;
 

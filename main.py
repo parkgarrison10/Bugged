@@ -21,5 +21,7 @@ while(True):
   elif(op.lower() == "resolve"):  
     resolve(tracker, cursor)  
   elif(op.lower() == "exit"):  
-    break; 
+    break
+  else:
+    print("That is not a valid option! Please try again.")
 print("Goodbye.")

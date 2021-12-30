@@ -29,7 +29,16 @@ def delete(database, cursor): #deletes an entry from the database
     database.commit()
 
 def edit(database, cursor):
-    print("not yet implemented")
+    select(cursor)
+    edit_id = input("What is the id of the bug you want to edit?: ")
+    edit_var = input("What would you like to edit (project or description)?: ")
+    change_to = input("What would you like to change it to?: ")
+    if edit_var.lower() == "project":
+        update_bug = "UPDATE bugs SET project = %s WHERE id = %s"
+    elif edit_var.lower() == "description":
+        update_bug = "UPDATE bugs SET description = %s WHERE id = %s"
+    cursor.execute(update_bug, change_to, edit_id)
+    database.commit()  
 
 def resolve(database, cursor):
     select(cursor)
